@@ -23,16 +23,16 @@ import Safe (headMay)
 data Model = Model
 
 initialModel :: Model
-initialModel = undefined
+initialModel = Model
 
 view :: Model -> QDiagram Cairo V2 Double [Text]
-view model = toGtkCoords $ undefined
+view model = toGtkCoords $ scale 100 $ circle 1 # fc blue # value ["circle"]
 
 updateWithClick :: Text -> Model -> Model
-updateWithClick clickedObj model = undefined
+updateWithClick clickedObj model = Model
 
 updateWithKeyPress :: Text -> Model -> Model
-updateWithKeyPress pressedKey model = undefined
+updateWithKeyPress pressedKey model = Model
 
 main :: IO ()
 main = do
@@ -60,6 +60,7 @@ main = do
         liftIO $ do
             model <- readIORef vModel
             let mClickedObj = headMay $ reverse $ sample (view model) (p2 pos)
+            print mClickedObj 
             mapM_ (modifyIORef vModel . updateWithClick) mClickedObj
             Gtk.widgetQueueDraw window
     canvas `Gtk.on` Gtk.exposeEvent $ Gtk.tryEvent $ do
