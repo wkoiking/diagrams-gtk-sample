@@ -21,7 +21,7 @@ $ stack setup
 
 $ stack build
 
-$ stack exec hascats-exe
+$ stack exec sample-exe
 ~~~
 
 ## Windows
@@ -116,7 +116,7 @@ $ cp /c/msys64/mingw64/bin/zlib1.dll /c/Users/UserName/AppData/Local/Programs/st
 
 $ stack build
 
-$ stack exec hascats-exe
+$ stack exec sample-exe
 ~~~
 
 ※In case of 32bit OS, please replace 64 to 32 in /VDU/stack.cmd by text editor of your choice.

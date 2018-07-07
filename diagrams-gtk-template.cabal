@@ -15,7 +15,7 @@ build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
-executable hascats-exe
+executable sample-exe
   hs-source-dirs:      app
   main-is:             Main.hs
   ghc-options:         -threaded
