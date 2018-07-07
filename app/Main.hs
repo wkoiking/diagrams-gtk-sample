@@ -20,19 +20,24 @@ import Data.Text (Text)
 -- safe
 import Safe (headMay)
 
-data Model = Model
+data Model = Circle | Square
 
 initialModel :: Model
-initialModel = Model
+initialModel = Circle
 
 view :: Model -> QDiagram Cairo V2 Double [Text]
-view model = toGtkCoords $ scale 100 $ circle 1 # fc blue # value ["circle"]
+view Circle = toGtkCoords $ scale 100 $ circle 1 # fc blue # value ["circle"]
+view Square = toGtkCoords $ scale 100 $ square 1 # fc red # value ["square"]
 
 updateWithClick :: Text -> Model -> Model
-updateWithClick clickedObj model = Model
+updateWithClick "circle" model = Square
+updateWithClick "square" model = Circle
+updateWithClick _ model        = model
 
 updateWithKeyPress :: Text -> Model -> Model
-updateWithKeyPress pressedKey model = Model
+updateWithKeyPress "s" model = Square
+updateWithKeyPress "c" model = Circle
+updateWithKeyPress _ model   = model
 
 main :: IO ()
 main = do
