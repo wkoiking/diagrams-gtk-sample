@@ -96,9 +96,9 @@ Install Git for Windows from following URL.
 
 <https://git-for-windows.github.io/>
 
-### Installation of VDU
+### Installation of diagrams-gtk-template
 
-Clone VDU repository by executing following command from git bash.
+Clone diagrams-gtk-template repository by executing following command from git bash.
 
 ~~~
 $ git clone https://github.com/wkoiking/diagrams-gtk-template.git
@@ -119,7 +119,7 @@ $ stack build
 $ stack exec sample-exe
 ~~~
 
-※In case of 32bit OS, please replace 64 to 32 in /VDU/stack.cmd by text editor of your choice.
+※In case of 32bit OS, please replace 64 to 32 in /diagrams-gtk-template/stack.cmd by text editor of your choice.
 
 ### Reference
 
