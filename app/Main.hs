@@ -33,6 +33,7 @@ type GenericDiagram a = QDiagram Cairo V2 Double a
 
 type SelectableDiagram = GenericDiagram [Text]
 
+
 addTimer :: Int -> IO () -> IO ()
 addTimer delay io = forever $ do
     a <- async io
