@@ -26,7 +26,6 @@ $ stack exec sample-exe
 
 ## Windows
 
-
 Check the Internet Connection.
 
 ### Installation of stack
